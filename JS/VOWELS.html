@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOWELS</title>
+  </head>
+  <body>
+    <script>
+           "use strict";
+           function vowels(aaa) {
+  const letter = {'а': true,'е': true,'ё': true,'и': true,'о': true,'у': true,'ы': true,'э': true,'ю': true,'я': true
+  };
+
+  return Array.from(aaa.toLowerCase()).reduce((count, symbols) => {
+    if (letter[symbols]) {
+      count++;
+    }
+    return count;
+  }, 0);
+}
+
+const inputSt = prompt("Введите строку:");
+const vowelCount = vowels(inputSt);
+console.log("Количество гласных букв в строке: " + vowelCount);
+
+      </script>
+  </body>
+</html>
